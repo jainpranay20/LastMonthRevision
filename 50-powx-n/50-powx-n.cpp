@@ -1,5 +1,6 @@
 class Solution {
 public:
+    //O(logn) approach
     double helper(double x, int n)
     {
         if(n==0)
@@ -16,3 +17,4 @@ public:
         else return 1.0/helper(x,n);
     }
 };
+ 

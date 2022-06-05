@@ -24,6 +24,30 @@ public:
             ans[0]=i;
        }
        return ans;
+       
+        // int *res = new int[2];
+        
+        // unordered_map<int, int> mp;
+        
+        // for (int i=0; i<n; i++){
+        //     mp[arr[i]]++;
+        // }
+        
+        // for (int i=1; i<=n; i++){
+        //     if(mp[i]==2)
+        //         res[0] = i;
+        //     else if(mp[i]==0)
+        //         res[1] = i;
+        // }
+        
+        // return res;
+   //   “new” is a keyword in C++ that is responsible for Dynamically allocated memory.
+
+//“new int” would Dynamically allocate memory for an integer and return it`s address to the variable that is declared at the right side of “new int”
+
+
+       
+       
     }
 };
 // { Driver Code Starts.

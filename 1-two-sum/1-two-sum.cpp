@@ -12,6 +12,8 @@ public:
         // }
         // return {};
 
+        
+        //Time Complexity: O(n^2)
         vector<int> index;
         int size=nums.size();
         for(int i=0;i<size;i++)
@@ -29,8 +31,7 @@ public:
         }
         return index;
     
-	//Time Complexity: O(n^2)
-        
+	
         //O(nlogn) for sorting o(n) space
         // vector<pair<int,int>>vp;
         // int n= nums.size();

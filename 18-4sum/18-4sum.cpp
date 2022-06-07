@@ -1,6 +1,41 @@
 class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
+        // 0(n^3 logn) time complexity space 0(number of quads)
+//         int n = nums.size();
+//         vector<vector<int>> ans;
+//         sort(nums.begin(),nums.end());
+//         set<vector<int>> sv;
+//         for(int i=0;i<n;i++)
+//         {
+//             for(int j=i+1;j<n;j++)
+//             {
+    
+//                 for(int k=j+1;k<n;k++)
+//                 { 
+//                   //important line
+//                    int x = (long long)target - nums[i]- nums[j]- nums[k];
+//                    if(binary_search(nums.begin()+k+1,nums.end(),x))
+//                    {
+//                             vector<int> v;
+//                             v.push_back(nums[i]);
+//                             v.push_back(nums[j]);
+//                             v.push_back(nums[k]);
+//                             v.push_back(x);
+//                             //sort(v.begin(),v.end());
+//                             sv.insert(v);
+//                     }
+//                 }
+//             }
+//         }
+//         for(auto i:sv)
+//             ans.push_back(i);
+//         return ans;
+//     }
+        
+        
+        
+        // 0(n^3) time complexity ans 0(number of quads) space complexity
         int n = nums.size();  
         sort(nums.begin() , nums.end());  // sort the array to use the two pointers method
         vector<vector<int>> ans;  

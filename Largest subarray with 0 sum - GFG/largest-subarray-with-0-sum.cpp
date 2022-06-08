@@ -12,10 +12,12 @@ class Solution{
     public:
     int maxLen(vector<int>&A, int n)
     {   
-        // Your code here
+        // time complexity O(nlogn) n for traversal logn for search in map 
+        // space complexity O(n)
         int ans = 0, sum = 0;
         unordered_map<int, int> mp;
-        mp[0] = -1;
+        mp[0] = -1; // nice case if we donot write this line it will fail in
+        // the case of -1 1 -1 1   try once nice logic
         for (int i = 0; i < n; i++)
         {
             sum += A[i];

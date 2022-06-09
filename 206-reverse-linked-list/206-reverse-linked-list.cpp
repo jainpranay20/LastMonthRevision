@@ -10,16 +10,28 @@
  */
 class Solution {
 public:
-    ListNode* reverseList(ListNode* curr) {
-        ListNode* prev=NULL;
-        ListNode* next1=curr;
-        while(curr!=NULL)
-        {
-            next1=curr->next;
-            curr->next=prev;
-            prev=curr;
-            curr=next1;
+    ListNode* reverseList(ListNode* head) {
+        // ITERATIVE 
+        // ListNode *nextNode, *prevNode = NULL;
+        // while (head!=NULL) {
+        //     nextNode = head->next;
+        //     head->next = prevNode;
+        //     prevNode = head;
+        //     head = nextNode;
+        // }
+        // return prevNode;
+        
+        
+        
+        // RECURSIVE IT WENT TO HEAD =4 CALL HEAD->NEXT->NEXT IS NULL CAREFULL WHILE RUNNING 
+         if (head == NULL || head -> next == NULL) {
+            return head;
         }
-        return prev;
+        // recursive call so passing all elements except first because in recursion we break            nodes as 1 and (n-1) and we handle 1 and recursion handles (n-1) part:
+        ListNode* node = reverseList(head -> next);
+        cout<<head->next->val;
+        head -> next -> next = head;
+        head -> next = NULL;
+        return node;
     }
 };

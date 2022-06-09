@@ -11,21 +11,36 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        ListNode *temp=head;
-        int count=0;
-        while(head!=NULL)
+        // SLOW AND FAST POINTER APPROACH
+        ListNode *slow,*fast;
+        slow=head;
+        fast=head;
+        // MOST IMPORTANT or nahi ayega because it will occur null pointer exception rememeber 
+        while(fast!=NULL and fast->next!=NULL)
         {
-            head=head->next;
-            count++;
-        } 
-        int mid=count/2;
-        int x=0;
-        while(x!=mid)
-        {
-            if(temp->next!=NULL)
-            temp=temp->next;
-            x++;
+            slow=slow->next;
+            fast=fast->next->next;
         }
-        return temp;
+        return slow;
+        
+        
+        
+        // O(n) approach 
+        // ListNode *temp=head;
+        // int count=0;
+        // while(head!=NULL)
+        // {
+        //     head=head->next;
+        //     count++;
+        // } 
+        // int mid=count/2;
+        // int x=0;
+        // while(x!=mid)
+        // {
+        //     if(temp->next!=NULL)
+        //     temp=temp->next;
+        //     x++;
+        // }
+        // return temp;
     }
 };

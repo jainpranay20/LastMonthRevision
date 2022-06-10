@@ -12,10 +12,11 @@ class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         // using dummy node TC O( N1 + N2 ) SPACE O( N1 + N2)
+        // brute force approach using an extra linklist 
+        // like we use to do in sorted arrays
         ListNode* temp1=list1, *temp2=list2;
         ListNode* list3=new ListNode();
         ListNode* temp3 = list3;
-        
         while(temp1 && temp2)
         {
             if(temp1->val <= temp2->val)

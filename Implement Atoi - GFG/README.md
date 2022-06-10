@@ -1,5 +1,5 @@
 # Implement Atoi
-##  Medium 
+## Medium 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Your task &nbsp;is to implement the function <strong>atoi</strong>. The function takes a string(str) as&nbsp;argument and converts it to an integer and returns it.</span></p>
 

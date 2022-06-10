@@ -14,7 +14,7 @@ public:
         ListNode *dummy=new ListNode(0);
         ListNode *curr=dummy;
         int carry=0;
-        while(l1!=NULL || l2 ||carry==1)
+        while(l1!=NULL || l2!=NULL ||carry==1)
         {
             int sum=0;
             if(l1!=nullptr)

@@ -11,6 +11,8 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        //Time Complexity O(max(N, M)) where N is length of l1 & M is length of l2
+        //Space Complexity O(max(N,M))
         ListNode *dummy=new ListNode(0);
         ListNode *curr=dummy;
         int carry=0;

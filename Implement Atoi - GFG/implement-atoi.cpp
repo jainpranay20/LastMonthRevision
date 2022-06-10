@@ -17,6 +17,12 @@ class Solution{
     // stoll() - Convert string to long long.
     // stol() - -Convert string to long int.
     // stoull() - Convert string to unsigned integer.
+    // atoi argument to integer
+    
+    // int nums=stoi(str);   imp concept to learn as str will conver even "123geek" into 123
+    //     return nums;
+    
+    
         int i=0,sign=1;
         if(A[i]=='-'){
             sign=-1;

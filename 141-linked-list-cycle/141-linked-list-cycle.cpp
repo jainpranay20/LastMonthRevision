@@ -19,7 +19,7 @@ class Solution{
             }
             return false;
             
-            // optimised approach
+            // optimised approach O(n)time complexity O(1)space
             // if(head == NULL)
             // return false;
             // ListNode *fast = head;

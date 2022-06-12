@@ -11,8 +11,8 @@ public:
                 sum=sum-nums[i];
                 st.erase(nums[i]);
                 i++;
-            }else{
-            
+            }
+            else{
             sum=sum+nums[j];
             st.insert(nums[j]);
             j++;

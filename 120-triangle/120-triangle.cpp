@@ -3,6 +3,8 @@ class Solution
     public:
         int minimumTotal(vector<vector < int>> &triangle)
         {
+            // bhaut sahi question h y
+            //Top-Down Dynamic Programming
                 for (int level = size(triangle) - 2; level >= 0; level--)	
                     // start from bottom-1 level
                     for (int i = 0; i <= level; i++)

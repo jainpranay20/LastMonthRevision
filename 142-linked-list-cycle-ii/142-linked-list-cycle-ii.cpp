@@ -9,6 +9,7 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
+        // floyd cycle detection
         if(head == NULL)
             return head;
             ListNode *fast = head;
@@ -30,6 +31,8 @@ public:
             }
             return NULL;
         
+        
+        // not optimised
         // ListNode* slowptr=head;
         // ListNode* fastptr=head->next;
         // while(slowptr!=fastptr)

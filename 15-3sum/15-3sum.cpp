@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         // Best solution afterwall 3 TLE
-        // 
+        // O(N ^2) solution no of triplets is space complexity
         int n = nums.size();
         vector<vector<int>> ans;
         sort(nums.begin(),nums.end());
@@ -20,7 +20,7 @@ public:
                 if(nums[j]+nums[k]>target)k--;
                 else j++;
             }
-            while(i+1<n && nums[i+1]==nums[i])i++;
+            while(i<n-2 && nums[i+1]==nums[i])i++;
         }
         return ans;
         

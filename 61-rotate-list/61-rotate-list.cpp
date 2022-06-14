@@ -10,7 +10,9 @@
  */
 class Solution {
 public:
-    ListNode* rotateRight(ListNode* head, int k) {
+    ListNode* rotateRight(ListNode* head, int k) { 
+        // its a very nice concept here we are making a ring
+        // then break the ring
          if(head==NULL || head->next==NULL)
             return head;
         ListNode *curr=head;

@@ -18,24 +18,24 @@ class Solution{
     	
     	int arriv=0;
     	int depart=0;
-    	int ans=1,count=1;
-    	
+    	int needed_platforms=1,max_platforms=1;
+    	//max_platforms is needed currently
         int i=1,j=0;
         
         while(i<n&&j<n)
         {
             if(arr[i]<=dep[j]){
-                count++;
+                max_platforms++;
                 i++;
                 
             }
             else{
-                count--;
+                max_platforms--;
                 j++;
             }
-            ans=max(count,ans);
+            needed_platforms=max(max_platforms,needed_platforms);
         }
-        return ans;
+        return needed_platforms;
     }
 };
 

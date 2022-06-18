@@ -1,7 +1,7 @@
 class WordFilter {
 public:
     unordered_map<string, int> mp; //stores preffix and suffix sequence in it
-    
+    // https://leetcode.com/problems/prefix-and-suffix-search/discuss/2165519/C%2B%2B-or-Use-Hashmap-or-Simple-solution-with-comments-or-DLC-June-Day-18
     WordFilter(vector<string>& words) 
     {
         int n = words.size();

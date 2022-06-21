@@ -18,10 +18,12 @@ public:
     }
     vector<int> subsetSums(vector<int> arr, int N)
     {
-        // Write Your Code here
+        // Time Complexity: O(2^n)+O(2^n log(2^n))
+        // Space Complexity: O(2^n)
         vector<int> ans;
         int sum=0;
         solve(arr,N,0,0,ans);
+        sort(ans.begin(),ans.end());
         return ans;
     }
 };

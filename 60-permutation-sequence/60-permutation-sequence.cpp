@@ -28,13 +28,14 @@ class Solution
         }
        	// for(auto i:num)
        	//     cout<<i;
-        std::ostringstream os;
-    for (int i: num) {
-        os << i;
-    }
- 
-    std::string str(os.str());
-    std::cout << str;
+        ostringstream os;
+        for (int i: num)
+        {
+            os << i;
+        }
+
+        string str(os.str());
+        cout << str;
         return str;
     }
 };

@@ -18,7 +18,7 @@ while(t--){
     cin>>n;
     vector<int>v (n);
     for(int i =0; i<n;i++) cin>>v[i];
-    reverse(v,n);
+    reverse(v.begin(),v.end());
     for(auto it1 : v) cout<<it1<<" ";
     cout<<endl;
 }

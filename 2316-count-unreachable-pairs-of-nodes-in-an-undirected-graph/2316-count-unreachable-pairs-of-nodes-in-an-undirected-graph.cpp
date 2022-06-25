@@ -61,6 +61,8 @@ public:
                 long long unreachable=n-count;
                 
                 long long z=count*unreachable;
+                cout<<z<<" ";
+                //int z=unreachable;
                 res+=(z);
             }
         }

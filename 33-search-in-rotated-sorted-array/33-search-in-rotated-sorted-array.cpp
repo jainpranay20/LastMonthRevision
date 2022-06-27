@@ -1,7 +1,8 @@
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        
+        // jo bhi part sorted h hum udhar ki side jayenge 
+        // we leave rest of all 
 		int start = 0;
 		int end = nums.size()-1;
 

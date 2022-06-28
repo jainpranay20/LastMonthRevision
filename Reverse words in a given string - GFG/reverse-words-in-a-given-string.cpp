@@ -11,29 +11,42 @@ class Solution
     //Function to reverse words in a given string.
     string reverseWords(string s) 
     { 
-        // code here 
-        stack<string> st;
-        string ch="";
+        // code here
+        reverse(s.begin(),s.end());
         for(int i=0;i<s.length();i++)
         {
-            string word="";
+            int j=i;
             while(s[i]!='.' and i<s.length())
             {
-                word=word+s[i];
                 i++;
             }
-            st.push(word);
-            if(i<s.length())
-            st.push(".");
+            reverse(s.begin()+j,s.begin()+i);
         }
-        while(!st.empty())
-        {
-            ch=ch+st.top();
-            st.pop();
-        }
-        return ch;
-    } 
+        return s;
+    }
 };
+        // stack<string> st;
+        // string ch="";
+        // for(int i=0;i<s.length();i++)
+        // {
+        //     string word="";
+        //     while(s[i]!='.' and i<s.length())
+        //     {
+        //         word=word+s[i];
+        //         i++;
+        //     }
+        //     st.push(word);
+        //     if(i<s.length())
+        //     st.push(".");
+        // }
+        // while(!st.empty())
+        // {
+        //     ch=ch+st.top();
+        //     st.pop();
+        // }
+        // return ch;
+//     } 
+// };
 
 // { Driver Code Starts.
 int main() 

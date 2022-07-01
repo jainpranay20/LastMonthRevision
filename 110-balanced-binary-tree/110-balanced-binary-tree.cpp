@@ -11,6 +11,7 @@
  */
 class Solution {
 public:
+    // optimised solution
     int height(TreeNode *root)
     {
         if(root==NULL)

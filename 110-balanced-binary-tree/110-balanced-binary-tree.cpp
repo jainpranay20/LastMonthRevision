@@ -11,7 +11,31 @@
  */
 class Solution {
 public:
-    int height(TreeNode* root)
+    int height(TreeNode *root)
+    {
+        if(root==NULL)
+            return 0;
+        int lh=height(root->left);
+        int rh=height(root->right);
+        if(lh==-1 || rh==-1)
+            return -1;
+        if(abs(lh-rh)>1)
+            return -1;
+        
+        return max(lh,rh)+1;
+    }
+    bool isBalanced(TreeNode* root) {
+        int check=height(root);
+        return check==-1? false:true; 
+    }
+};
+
+
+/* naive solution O(N) for traversing O(N) for height o(N^2)
+
+
+
+int height(TreeNode* root)
     {
         if(root==NULL)
             return 0;
@@ -41,3 +65,5 @@ public:
         return true;
     }
 };
+
+*/

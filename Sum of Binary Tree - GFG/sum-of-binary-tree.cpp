@@ -81,19 +81,18 @@ struct Node
 */
 // Function should return the sum of all the elements
 // of the binary tree
-int sumis(Node* root)
+int sum(Node* root,int &v)
 {
-    if(root==nullptr)
+    if(root==NULL)
     return 0;
-    int lh=sumis(root->left);
-    int rh=sumis(root->right);
-    
-    return root->key+lh+rh;
+    int lh=sum(root->left,v);
+    int rh=sum(root->right,v);
+    return v=lh+rh+root->key;
 }
 long int sumBT(Node* root)
 {
     // Code here
-    int sumi=0;
-    return sumis(root);
-    //return sum;
+    int val=0;
+    int a=sum(root,val);
+    return a;
 }

@@ -1,5 +1,5 @@
 # Bottom View of Binary Tree
-##  Medium 
+## Medium 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given a binary tree, print the bottom view from left to right.<br>
 A node is included in bottom view if it can be seen when we look at the tree from bottom.</span></p>

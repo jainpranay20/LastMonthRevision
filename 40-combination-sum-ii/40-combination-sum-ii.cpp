@@ -1,5 +1,39 @@
 class Solution {
 public:
+ void solve(vector<vector<int>> &ans,vector<int> &res,vector<int>& candidates,int target,int sum,int i)
+    {
+        if(i==candidates.size())
+        {
+            if(sum==target)
+            {
+                ans.push_back(res);
+                return;
+            }
+        }
+        if(sum>target|| i>=candidates.size())
+            return ;
+            
+        res.push_back(candidates[i]);
+        solve(ans,res,candidates,target,sum+candidates[i],i+1);
+        res.pop_back();
+        i++;
+        while(i<=candidates.size()-1 && candidates[i]==candidates[i-1])
+            i++;
+        solve(ans,res,candidates,target,sum,i);
+    }
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        vector<vector<int>> ans;
+        vector<int> res;
+        sort(candidates.begin(),candidates.end());
+        solve(ans,res,candidates,target,0,0);
+        return ans;
+    }
+};
+
+/*
+
+class Solution {
+public:
     vector<vector<int>> result;
     
     void comsum(vector<int> &curr, int target, int sum, vector<int> &candidates, int curInd, int n){
@@ -12,7 +46,8 @@ public:
         }
         
         for(int i = curInd; i < n; i++){
-            if(i != curInd && candidates[i]==candidates[i-1])               //to avoid picking up the same combnations i.e. we don't pick same element for certain kth position of a combination 
+            if(i != curInd && candidates[i]==candidates[i-1])               
+//to avoid picking up the same combnations i.e. we don't pick same element for certain kth position of a combination 
                 continue;
             sum += candidates[i];
             curr.push_back(candidates[i]);
@@ -61,3 +96,6 @@ public:
 //         for(auto i:st)
 //             ans.push_back(i);
 //         return ans;
+
+
+*/

@@ -23,7 +23,7 @@ class Solution
                 n=n/2;
                 count=0;
             }
-            else if(n%2==1){
+            else if(n&1){
                 n=n/2;
                 count++;
                 //ans=max(ans,count);

@@ -26,7 +26,7 @@ class Solution
             else if(n%2==1){
                 n=n/2;
                 count++;
-                ans=max(ans,count);
+                //ans=max(ans,count);
             }
             if(count>1)
             return false;

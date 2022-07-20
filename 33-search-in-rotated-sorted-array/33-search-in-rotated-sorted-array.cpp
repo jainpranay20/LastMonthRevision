@@ -12,7 +12,11 @@ public:
 
 			if(nums[mid] == target)
 				return mid;
-
+// catch yahi h ki 
+            
+            //1. target element kya start se bada 
+            //2. target element kya mid se bada hai
+                
 			if(nums[mid] >= nums[start])
 			{
 				if(nums[start] <= target && target < nums[mid])

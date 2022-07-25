@@ -29,7 +29,7 @@ public:
         }
         // recursive call so passing all elements except first because in recursion we break            nodes as 1 and (n-1) and we handle 1 and recursion handles (n-1) part:
         ListNode* node = reverseList(head -> next);
-        cout<<head->next->val;
+        //cout<<head->next->val;
         head -> next -> next = head;
         head -> next = NULL;
         return node;

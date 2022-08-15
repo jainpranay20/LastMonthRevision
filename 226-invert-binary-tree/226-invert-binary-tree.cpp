@@ -12,6 +12,30 @@
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
+        stack<TreeNode*> st;
+        st.push(root);
+        
+        while(!st.empty())
+        {
+            TreeNode *curr=st.top();
+            st.pop();
+            if(curr==nullptr)
+                continue;
+            st.push(curr->left);
+            st.push(curr->right);
+            swap(curr->left,curr->right);
+            
+        }
+        return root;
+    }
+    
+};
+
+/*
+
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
         if(root)
         {
             if(root->left!=nullptr)
@@ -26,3 +50,5 @@ public:
         return root;
     }
 };
+
+*/

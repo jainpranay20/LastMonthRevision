@@ -11,13 +11,14 @@
  */
 class Solution {
 public:
+    //
     TreeNode* invertTree(TreeNode* root) {
-        stack<TreeNode*> st;
+        queue<TreeNode*> st;
         st.push(root);
         
         while(!st.empty())
         {
-            TreeNode *curr=st.top();
+            TreeNode *curr=st.front();
             st.pop();
             if(curr==nullptr)
                 continue;

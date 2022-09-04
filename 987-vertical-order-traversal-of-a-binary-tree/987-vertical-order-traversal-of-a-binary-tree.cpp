@@ -31,7 +31,9 @@ public:
             vector<int>level;
             for(auto s : p.second){      //p.second is map<int, multiset<int>>
 			    //inserting all the values of the multiset in level vector
-                level.insert(level.end(), s.second.begin(), s.second.end()); 
+               for(auto val: s.second) {
+                   level.push_back(val);   
+               }
             }
             ans.push_back(level);
         }

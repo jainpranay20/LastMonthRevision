@@ -27,24 +27,24 @@ public:
             return ans;
         queue<Node*> q;
         q.push(root);
-        while(q.size())
-        {
+        while(!q.empty())
+        { 
             vector<int> res;
-            int n = q.size();
+            int n=q.size();
             for(int i=0;i<n;i++)
             {
-                Node *temp=q.front();
-                q.pop();
+                Node* temp=q.front();
                 res.push_back(temp->val);
-                
-                for(int i=0;i<temp->children.size();i++)
+                q.pop();
+                for(int j=0;j<temp->children.size();j++)
                 {
-                    if(temp->children[i])
-                        q.push(temp->children[i]);
+                    if(temp->children[j])
+                    q.push(temp->children[j]);
+                    //cout<<temp->children[j]->val;
                 }
             }
             ans.push_back(res);
-        }
+        } 
         return ans;
     }
 };

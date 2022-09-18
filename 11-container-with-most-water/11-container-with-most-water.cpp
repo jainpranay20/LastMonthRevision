@@ -11,7 +11,7 @@ public:
         while(i<j)
         {
             water=max(water,min(height[i],height[j])*(j-i));
-            cout<<water<<" ";
+            //cout<<water<<" ";
             if(height[i]>height[j])
                 j--;
             else

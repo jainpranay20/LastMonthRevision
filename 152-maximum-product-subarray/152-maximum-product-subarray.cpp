@@ -2,6 +2,10 @@ class Solution {
 public:
     int maxProduct(vector<int>& nums) 
     {
+        //0(n2)
+        // i aur j pointers i====0 and j====i+1
+        
+        //o(n)
 		// empty array case
 		if (nums.size() == 0)
 			return 0;

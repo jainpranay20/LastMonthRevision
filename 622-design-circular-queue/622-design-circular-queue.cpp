@@ -60,6 +60,9 @@ public:
     }
 };
 
+//condition of enqueue and dequeue
+//front =(rear+1)%capacity and front ==-1
+
 /**
  * Your MyCircularQueue object will be instantiated and called as such:
  * MyCircularQueue* obj = new MyCircularQueue(k);

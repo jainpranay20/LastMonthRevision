@@ -22,6 +22,11 @@ class Solution
 
                 s.push(i);
             }
+            // for(auto i:left)
+            // {
+            //     cout<<i<<" ";
+            // }
+            // for example suppose 2 1 5 6 2 3 --- 00232
             while (!s.empty())
                 s.pop();
             for (int i = n - 1; i >= 0; i--)

@@ -38,6 +38,7 @@ public:
             {
                 v[i]->next=v[i+1];
             }
+            v[v.size()-1]->next=NULL;
         }
         return root;
     }
